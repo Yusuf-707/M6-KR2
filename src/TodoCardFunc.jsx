@@ -5,7 +5,7 @@ export const TodoCardFunc = ({todo, addTask, selectedTasks}) => {
   return(
       <div>
         <h1>{todo.title}</h1>
-        <button disabled={isSelected} onClick={() => addTask(todo)}>Взять в работу</button>
+        <button disabled={isSelected} onClick={() => addTask(todo)}>{isSelected ? 'Уже выбрано' : 'Взять в работу'}</button>
         <hr />
       </div>
     )

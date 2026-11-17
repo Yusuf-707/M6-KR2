@@ -17,6 +17,7 @@ function App() {
         ))}
       </div>
       <div className="tasks_div">
+          <h1>{selectedTasks.length > 1 ? `Мои заказы-${selectedTasks.length}` : ""}</h1>
         {selectedTasks.map(task => <TaskCardFunc key={task.id} task={task} removeTask={removeTask} />)}
         {selectedTasks.length > 0 ? <button onClick={clearAll}>Очистить всё</button> : <h1>пустой</h1>}
       </div>
